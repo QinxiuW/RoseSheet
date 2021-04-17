@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.rosesheet</groupId>
+  <artifactId>dependencies</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <developers>
+    <developer>
+      <id>qinxiu</id>
+      <name>Qinxiu Wang</name>
+    </developer>
+  </developers>
+
+  <properties>
+    <!--  Commons  -->
+    <mybatis-plus.version>3.4.1</mybatis-plus.version>
+    <p6spy.version>3.9.1</p6spy.version>
+    <!--Alibaba OSS server-->
+    <alicloud.version>3.11.2</alicloud.version>
+    <!-- Picture compression -->
+    <thumbnailator.version>0.4.11</thumbnailator.version>
+    <!-- mapstruct -->
+    <mapstruct.version>1.4.1.Final</mapstruct.version>
+    <!-- Utils -->
+    <rsaUtils.version>1.0.9.RELEASE</rsaUtils.version>
+    <bitwalker.version>1.21</bitwalker.version>
+  </properties>
+
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- DataSource -->
+      <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>mybatis-plus-boot-starter</artifactId>
+        <version>${mybatis-plus.version}</version>
+      </dependency>
+      <!-- SQL 性能分析插件 -->
+      <dependency>
+        <groupId>p6spy</groupId>
+        <artifactId>p6spy</artifactId>
+        <version>${p6spy.version}</version>
+      </dependency>
+
+      <!-- Alibaba cloud service -->
+      <dependency>
+        <groupId>com.aliyun.oss</groupId>
+        <artifactId>aliyun-sdk-oss</artifactId>
+        <version>${alicloud.version}</version>
+        <exclusions>
+          <exclusion>
+            <artifactId>commons-logging</artifactId>
+            <groupId>commons-logging</groupId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <!-- Picture compression -->
+      <!-- https://mvnrepository.com/artifact/net.coobird/thumbnailator -->
+      <dependency>
+        <groupId>net.coobird</groupId>
+        <artifactId>thumbnailator</artifactId>
+        <version>${thumbnailator.version}</version>
+      </dependency>
+
+      <!-- bean projection-->
+      <dependency>
+        <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct</artifactId>
+        <version>${mapstruct.version}</version>
+      </dependency>
+
+      <!-- Utils -->
+      <dependency>
+        <groupId>eu.bitwalker</groupId>
+        <artifactId>UserAgentUtils</artifactId>
+        <version>${bitwalker.version}</version>
+      </dependency>
+
+    </dependencies>
+  </dependencyManagement>
+</project>
