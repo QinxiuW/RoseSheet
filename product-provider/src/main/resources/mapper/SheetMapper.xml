@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rose.provider.mapper.ISheetMapper">
+  <resultMap id="BaseResultMap" type="com.rose.provider.domain.Sheet">
+    <!--@mbg.generated-->
+    <!--@Table tb_sheet-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="song_name" jdbcType="VARCHAR" property="songName" />
+    <result column="lyric_author" jdbcType="VARCHAR" property="lyricAuthor" />
+    <result column="compositor" jdbcType="VARCHAR" property="compositor" />
+    <result column="song_key" jdbcType="VARCHAR" property="songKey" />
+    <result column="tags" jdbcType="VARCHAR" property="tags" />
+    <result column="topic" jdbcType="VARCHAR" property="topic" />
+    <result column="picture_dir" jdbcType="VARCHAR" property="pictureDir" />
+    <result column="audio_dir" jdbcType="VARCHAR" property="audioDir" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="created" jdbcType="TIMESTAMP" property="created" />
+    <result column="updated" jdbcType="TIMESTAMP" property="updated" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, song_name, lyric_author, compositor, song_key, tags, topic, picture_dir, audio_dir,
+    "type", created, updated
+  </sql>
+</mapper>

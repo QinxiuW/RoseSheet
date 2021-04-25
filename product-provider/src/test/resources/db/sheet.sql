@@ -14,7 +14,7 @@ CREATE table tb_sheet
     picture_dir  VARCHAR(50)                       DEFAULT NULL,
     audio_dir    VARCHAR(50)                       DEFAULT NULL,
     type         VARCHAR(20)                       DEFAULT NULL,
-    created      TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    created      TIMESTAMP  NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated      TIMESTAMP           DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -23,7 +23,7 @@ CREATE table tb_album
     id         BIGSERIAL PRIMARY KEY    NOT NULL,
     album_name VARCHAR(20) UNIQUE       NOT NULL,
     created    TIMESTAMP  NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated    TIMESTAMP          DEFAULT CURRENT_TIMESTAMP
+    updated    TIMESTAMP           DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE table tb_sheet_album

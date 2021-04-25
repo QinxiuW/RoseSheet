@@ -1,0 +1,18 @@
+base:
+  config:
+    postgresql:
+      hostname: postgresql.rose.com
+      port: 5432
+spring:
+  application:
+    name: provider
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${base.config.postgresql.hostname}:${base.config.postgresql.port}/rose_sheet
+    username: postgres
+    password: root
+  jackson:
+    time-zone: GMT+2
+    date-format: dd-MM-yyyy HH:mm:ss
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
