@@ -121,11 +121,10 @@
 
 
   <modules>
-    <module>provider</module>
-    <module>provider-api</module>
     <module>dependencies</module>
     <module>commons</module>
-    <module>business</module>
+    <module>provider</module>
+    <module>provider-api</module>
   </modules>
 
 
