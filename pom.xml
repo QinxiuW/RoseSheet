@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <packaging>pom</packaging>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.2.6.RELEASE</version>
-    <relativePath/>
+    <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
-  <groupId>com.rosesheet</groupId>
-  <artifactId>RoseSheet</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+
+  <groupId>com.rose</groupId>
+  <artifactId>rose_project</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>rose_project</name>
+  <description>Demo project for Spring Boot</description>
 
   <properties>
     <java.version>11</java.version>
@@ -23,25 +26,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
-
-  <developers>
-    <developer>
-      <id>qinxiu</id>
-      <name>Qinxiu Wang</name>
-    </developer>
-  </developers>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>com.rosesheet</groupId>
-        <artifactId>dependencies</artifactId>
-        <version>${project.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
 
   <profiles>
     <profile>
@@ -119,13 +103,22 @@
     </profile>
   </profiles>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.rose</groupId>
+        <artifactId>dependencies</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <modules>
     <module>dependencies</module>
-    <module>commons</module>
-    <module>provider</module>
-    <module>provider-api</module>
+    <module>product-business</module>
+    <module>product-provider</module>
   </modules>
-
 
 </project>

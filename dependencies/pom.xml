@@ -2,23 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <groupId>com.rose</groupId>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.rosesheet</groupId>
   <artifactId>dependencies</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <developers>
-    <developer>
-      <id>qinxiu</id>
-      <name>Qinxiu Wang</name>
-    </developer>
-  </developers>
+
 
   <properties>
     <!--  Commons  -->
     <mybatis-plus.version>3.4.1</mybatis-plus.version>
-    <p6spy.version>3.9.1</p6spy.version>
     <!--Alibaba OSS server-->
     <alicloud.version>3.11.2</alicloud.version>
     <!-- Picture compression -->
@@ -27,9 +21,7 @@
     <mapstruct.version>1.4.1.Final</mapstruct.version>
     <!-- Utils -->
     <rsaUtils.version>1.0.9.RELEASE</rsaUtils.version>
-    <bitwalker.version>1.21</bitwalker.version>
   </properties>
-
 
   <dependencyManagement>
     <dependencies>
@@ -39,24 +31,12 @@
         <artifactId>mybatis-plus-boot-starter</artifactId>
         <version>${mybatis-plus.version}</version>
       </dependency>
-      <!-- SQL 性能分析插件 -->
-      <dependency>
-        <groupId>p6spy</groupId>
-        <artifactId>p6spy</artifactId>
-        <version>${p6spy.version}</version>
-      </dependency>
 
-      <!-- Alibaba cloud service -->
+      <!-- Utils -->
       <dependency>
-        <groupId>com.aliyun.oss</groupId>
-        <artifactId>aliyun-sdk-oss</artifactId>
-        <version>${alicloud.version}</version>
-        <exclusions>
-          <exclusion>
-            <artifactId>commons-logging</artifactId>
-            <groupId>commons-logging</groupId>
-          </exclusion>
-        </exclusions>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-rsa</artifactId>
+        <version>${rsaUtils.version}</version>
       </dependency>
 
       <!-- Picture compression -->
@@ -66,19 +46,11 @@
         <artifactId>thumbnailator</artifactId>
         <version>${thumbnailator.version}</version>
       </dependency>
-
-      <!-- bean projection-->
+      <!-- bean 映射-->
       <dependency>
         <groupId>org.mapstruct</groupId>
         <artifactId>mapstruct</artifactId>
         <version>${mapstruct.version}</version>
-      </dependency>
-
-      <!-- Utils -->
-      <dependency>
-        <groupId>eu.bitwalker</groupId>
-        <artifactId>UserAgentUtils</artifactId>
-        <version>${bitwalker.version}</version>
       </dependency>
 
     </dependencies>
